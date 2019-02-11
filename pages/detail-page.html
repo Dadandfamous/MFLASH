@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Museum Guide
+    </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="page.css">
+
+  </head>
+  <body>
+    <main>
+       <h1>Martins Mobile Museum App</h1>
+
+       <h2>3 paintings you can't afford:</h2>
+       <a href="./pages/detail-page.html"> <img class="artObject" src="http://mymodernmet.com/wp/wp-content/uploads/2017/06/monet-paintings.jpg" alt=""></a>
+
+
+
+       <section id="comments">
+          <h2>Comments</h2>
+          
+          <section class="comment">
+            <h3>Arien said:</h3>
+            <p>"These are definitely three of my favorite paintings I can't afford!"</p>
+          </section>
+        </section>
+
+        <form onsubmit="submitComment(); return false">
+            <div class="formSection">
+              <label for="name">Name:</label>
+              <input type="text" id="name">
+            </div>
+            <br>
+            <div class="formSection">
+              <label for="msg">Message:</label>
+              <textarea id="msg"></textarea>
+            </div>
+            <div class="button">
+              <button type="default">Post your comment</button>
+            </div>
+          </form>
+
+
+
+
+
+    </main>
+<footer>
+    <p>Made with ❤ at Codaisseur</p>
+</footer>
+  </body>
+  </html>
