@@ -1,0 +1,29 @@
+head {
+  display: none;
+}
+body {
+  margin: 0;
+  padding: 2rem 0;
+  width: 100%;
+  background: #FFBA00;
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+}
+
+body {
+  display: inline-block;
+  margin: 8px;
+}
+
+main {
+  background: white;
+  width: 90%;
+  margin: auto;
+  border-radius: 5px;
+  padding: 2rem 0;
+}
+
+footer {
+  margin: 3rem;
+  font-size: 1.2rem;
+}
