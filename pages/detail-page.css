@@ -67,54 +67,51 @@ form {
 
 }
 
-.artObject {
-  display: flex;
-  max-width: 80%;
-  max-height: 20rem;
-  margin: 1rem;
+.paintings {
+  margin: 10px;
+  background: white;
+  color: #333;
 }
 
-.flex-container {
-  display: flex;
-  /* max-width: 100%;
-  height: auto; */
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
-  margin: 20px; 
-  flex-direction: row;
+.painting-description h2 {
+  margin: 0;
 }
 
-.row {
+.paintings {
   display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
+}
+
+.painting {
+  box-sizing: border-box;
+  width: 20%;
+  flex-shrink: 0;
+
+  background: rebeccapurple;
+}
+
+.painting,
+.painting-description {
+  padding: 10px;
+}
+
+.painting img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .paintings {
+  display: block;
+  }
+
+  .painting {
   width: 100%;
-  max-width: 500px;
-}
+  border: 10px solid red;
+  }
 
-.column {
-  display: inline-block;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-}
-
-.left-column {
-  /* background-color: blue; */
-  height: auto;
-  text-align: right;
-  max-width: 100%;
-  color: aliceblue;
-  font-family: 'Indie Flower', cursive;
-}
-
-.right-column {
-  /* background-color: green; */
-  height: auto;
-  text-align: left;
-  margin-top: 20px;
-  max-width: 100%;
-  color: aliceblue;
-  font-family: 'Indie Flower', cursive;
+  .painting img {
+  width: 50%;
+  margin: 0 auto;
+  }
 }
