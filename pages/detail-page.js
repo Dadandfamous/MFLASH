@@ -1,4 +1,4 @@
-// add eventhandler
+
 
 function submitComment (){
   // console.log('Hello!')
