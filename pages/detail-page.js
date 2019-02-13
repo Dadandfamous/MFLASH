@@ -1,4 +1,14 @@
-
+function doesNotPassAllValidations(name, msg){
+  if (!name  || !msg ) {
+    alert('Please enter a name and a message before submitting.')
+    return true
+  } else if (msg.length > 300) {
+    alert("Please keep your message to a maximum of 300 characters.")
+    return true
+  } else {
+    return false
+  }
+} 
 
 function submitComment (){
   // console.log('Hello!')
@@ -11,6 +21,10 @@ function submitComment (){
   let txtInputField = document.getElementById('msg')
   const msg = txtInputField.value
   console.log(msg)
+
+  if(doesNotPassAllValidations(name, msg)){
+    return null
+  } else {
 
   // create section element + store in variable  comment
   const comment = document.createElement('section')
@@ -41,7 +55,17 @@ commentSection.appendChild(comment)
 
 inputField.value = null
 txtInputField.value = null
+  }
 }
 
 
 
+
+// function submitComment(){
+//     // gather data logic
+
+//     // check if user input passes validations
+//     if (doesNotPassAllValidations(name, msg)){
+//       return null
+//     }
+// }
