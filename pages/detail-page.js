@@ -1,12 +1,21 @@
 function doesNotPassAllValidations(name, msg){
-  if (!name  || !msg ) {
-    alert('Please enter a name and a message before submitting.')
-    return true
+  if (!name && !msg ) {
+      alert('Please enter a name and a message before submitting.')
+      return true
+  } else if (!name) {
+      alert('Please enter a name before submitting.')
+      return true
+  } else if (!msg) {
+      alert('Please enter a message before submitting.')
+      return true
   } else if (msg.length > 300) {
-    alert("Please keep your message to a maximum of 300 characters.")
-    return true
-  } else {
-    return false
+      alert('Please keep your message to a maximum of 300 characters.')
+      return true
+  } else if (msg === 'inappropriate language'){
+      alert('Please consider a more sophisticated wording.')
+      return true
+  }  else { 
+      return false
   }
 } 
 
@@ -28,9 +37,7 @@ function submitComment (){
 
   // create section element + store in variable  comment
   const comment = document.createElement('section')
-
   // create <h3> element + store in variable h3 
-
   const h3 = document.createElement('h3')
   // create <p> element + store in variable p
   const p = document.createElement('p')
@@ -59,13 +66,11 @@ txtInputField.value = null
 }
 
 
-
-
 // function submitComment(){
-//     // gather data logic
+//   // gather data logic
 
-//     // check if user input passes validations
-//     if (doesNotPassAllValidations(name, msg)){
-//       return null
-//     }
+//   // check if user input passes validations
+//   if (doesNotPassAllValidations(name, msg)){
+//     return null
+//   }
 // }
