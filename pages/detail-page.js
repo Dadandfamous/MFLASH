@@ -25,7 +25,7 @@ function submitComment (){
   h3.innerHTML = `${name} said:`
 
   // reassign innerhtml property of p variable to value of 'msg'
-  p.innerHTML = 'msg'
+  p.innerHTML = msg
 
   comment.classList.add("comment")
 
@@ -34,5 +34,14 @@ function submitComment (){
   comment.appendChild(h3)
   comment.appendChild(p)
 
-  console.log(comment)
+// display the elements on the page
+  const commentSection = document.getElementById('comments')
+
+commentSection.appendChild(comment)
+
+inputField.value = null
+txtInputField.value = null
 }
+
+
+
