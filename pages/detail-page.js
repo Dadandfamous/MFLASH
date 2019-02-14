@@ -21,16 +21,17 @@ function doesNotPassAllValidations(name, msg){
 
 function submitComment (){
   let inputField = document.getElementById('name')
-  console.log(inputField)
+      //   console.log(inputField)
   let name = inputField.value
-  console.log(name)
+      //   console.log(name)
+  let bigName = name.charAt(0).toUpperCase() + name.slice(1)
 
         // gather data txtarea
   let txtInputField = document.getElementById('msg')
   const msg = txtInputField.value
   console.log(msg)
 
-  if(doesNotPassAllValidations(name, msg)){
+  if(doesNotPassAllValidations(bigName, msg)){
     return null
   } else {
 
@@ -42,7 +43,7 @@ function submitComment (){
   const p = document.createElement('p')
   
         // reassign innerhtml property of h3 variable to value of '${name} said:'
-  h3.innerHTML = `${name} said:`
+  h3.innerHTML = `${bigName} said:`
 
         // reassign innerhtml property of p variable to value of 'msg'
   p.innerHTML = msg
