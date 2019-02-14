@@ -346,11 +346,62 @@ function displayPainting (painting) {
 }
 
   const gallery = document.getElementById('gallery')
-
-  for (let i = 0 ; i < data.artObjects.length ; i++){
+ // With forloop and 2 conditions (the 500 width)
+  for (let i = 0 ; (i < data.artObjects.length) && (500<data.artObjects[i].webImage.width) ; i++){
 
     let currentPainting = data.artObjects[i]
     console.log(currentPainting)
     
     displayPainting(currentPainting)
   }
+
+
+//   // Approach Rein
+  
+//   // Write code to display a painting
+//   // Write a function to display a painting
+//   // Rewrite the function to display the painting based on the data
+//   // Write you call this function
+
+//   const paintings = data.artObjects;
+
+//   // <a> <img> </a>
+//   function displayArtwork(artwork) { 
+//     console.log()
+//     // create element
+//     const link = document.createElement('a');
+//     const img = document.createElement('img')
+//     link.appendChild(img)
+//     // check X
+
+//     link.setAttribute('href', './pages/detail-page.html')
+//     img.setAttribute('src', artwork.webImage.url)
+//     // set attributes, href, and src (hardcoding)
+//     // check again X
+
+//     // append the element to the page
+//     const gallery = document.getElementById('gallery');
+//     gallery.appendChild(link)
+
+//     // check (should be visible on the page this time)
+
+//     link.setAttribute('alt', 'new painting title')
+//   }
+
+//   // displayArtwork(data.artObjects[0]); 
+
+// // hardcode the inside the function 
+// // to try displaying an image at all 
+
+// // add paramaters to the function
+// // call the function with an argument
+
+// // console.log() the parameters to check the values
+// // find the image url (artwork.webImage.url)
+
+// // replace hardcoded url with the url based on the parameter
+
+// for (let index = 0; index < paintings.length; index++) {
+//   const painting = paintings[index];
+//   displayArtwork(painting)
+// }
